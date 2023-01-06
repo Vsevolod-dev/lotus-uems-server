@@ -24,7 +24,7 @@ app.ws('/', (ws) => {
         break;
       case 'update-timer':
         const timer = timers.find(timer => timer.id === msg.socketId)
-        timer.time = 500
+        timer.time = 120
         break;
     }
   })
