@@ -10,6 +10,10 @@ app.use(express.json())
 
 let timers = []
 
+app.get('/users', (res, req) => {
+  res.send(JSON.stringify({id: 123, 'asd': 'dsasda'}))
+})
+
 app.ws('/', (ws) => {
   console.log('Connection success')
   ws.send('You have successfully connected')
